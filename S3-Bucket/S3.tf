@@ -13,3 +13,7 @@ resource "aws_s3_bucket_versioning" "omkar-rathod-aws_s3_bucket_versioning" {
     status = "Enabled" 
   }
 }
+resource "aws_s3_bucket_acl" "OR-bucket-ACL" {
+  bucket = aws_s3_bucket.omkar-rathod-bucket.id
+  acl = "private"
+}
