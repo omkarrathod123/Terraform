@@ -10,4 +10,5 @@ variable "instanceType" {
 variable "availabilityZone" {
   type = string
   default = "ap-south-1b"
+  description = "Default availability zone is ap-south-1b"
 }

@@ -9,7 +9,7 @@ resource "aws_instance" "jenkinsUbuntuServer" {
   tags = {
     Name = "Jenkins - Ubuntu"
     Env = "Dev"
-    Date = "19032025"
+    Date = "17042025"
     Size = "08 GB"
   }
 }
