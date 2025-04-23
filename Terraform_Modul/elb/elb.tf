@@ -1,5 +1,5 @@
 resource "aws_elb" "ELB" {
-  name = "Practic-ELB"
+  name = var.nameELB
   availability_zones = ["ap-south-1a","ap-south-1c","ap-south-1b"]
 
   dynamic "listener" {

@@ -27,3 +27,8 @@ variable "listeners" {
     }
   ]
 }
+variable "nameELB" {
+  type = string
+  default = "PracticELB"
+  description = "Default value is PracticELB"
+}
