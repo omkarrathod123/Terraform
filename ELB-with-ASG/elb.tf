@@ -1,15 +1,16 @@
-resource "aws_elb" "ELB" {
+resource "aws_lb" "ELB" {
   name = "Practic-ELB"
-  availability_zones = ["ap-south-1a","ap-south-1c","ap-south-1b"]
+  load_balancer_type = "application"
+  security_groups = [ "0mK4r" ]
+  subnets = [ "subnet-0aa2fe8a1c27a5e65" ]
+}
+resource "aws_lb_listener" "ELBlistner" {
+  load_balancer_arn = aws_lb.ELB.arn
+  port = "80"
+  protocol = "HTTP"
 
-  dynamic "listener" {
-    for_each = var.listeners
-
-    content {
-      instance_port = listener.value.instance_port
-      instance_protocol = listener.value.instance_protocol
-      lb_port = listener.value.lb_port
-      lb_protocol = listener.value.lb_protocol
-    }
+  default_action {
+    type = "forward"
+    target_group_arn = aws_autoscaling_group.ASG.arn
   }
 }

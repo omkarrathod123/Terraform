@@ -4,6 +4,4 @@ resource "aws_launch_template" "nginx" {
   instance_type = "t2.micro"
   key_name = "Practic"
   security_group_names = [ "0mK4r" ]
-
-  user_data = "./nginx.sh"
 }
