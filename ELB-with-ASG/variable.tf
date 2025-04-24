@@ -17,5 +17,5 @@ variable "keyName" {
 }
 variable "image_id" {
   type = string
-  default = "value"
+  default = "ami-06b6e5225d1db5f46"
 }
