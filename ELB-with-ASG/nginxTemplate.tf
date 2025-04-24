@@ -11,11 +11,13 @@ resource "aws_launch_template" "nginx-ubuntu" {
   key_name = var.keyName
   image_id = var.image_id
   instance_initiated_shutdown_behavior = "terminate"
-
-
+  network_interfaces {
+    security_groups = [ "sg-05d274dc9c715e508" ]
+    associate_public_ip_address = true
+  }
   tags = {
     Name = "Nginx-Ubuntu"
     OS = "Ubuntu"
   }
-  user_data = file("./nginx.sh")
+  user_data = base64encode(file("./nginx.sh"))
 }
