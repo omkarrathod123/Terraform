@@ -3,7 +3,7 @@
 sudo apt-get update -y
 sudo apt install nginx -y
 
-sleep 5
+sleep 3
 
 sudo systemctl start nginx
 cd /var/www/html

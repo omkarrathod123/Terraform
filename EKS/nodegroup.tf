@@ -1,5 +1,5 @@
 resource "aws_eks_node_group" "example" {
-  cluster_name    = aws_eks_cluster.example.name
+  cluster_name    = aws_eks_cluster.nginx-Cluster.name
   node_group_name = "test"
   node_role_arn   = var.node_role_arn
   subnet_ids      = [
@@ -9,8 +9,8 @@ resource "aws_eks_node_group" "example" {
     ]
 
   scaling_config {
-    desired_size = 1
-    max_size     = 2
+    desired_size = 3
+    max_size     = 10
     min_size     = 1
   }
 

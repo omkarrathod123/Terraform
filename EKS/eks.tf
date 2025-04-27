@@ -1,11 +1,11 @@
-resource "aws_eks_cluster" "example" {
-  name = "example"
+resource "aws_eks_cluster" "nginx-Cluster" {
+  name = "Nginx-Cluster"
 
   access_config {
     authentication_mode = "API"
   }
 
-  role_arn = "arn:aws:iam::491085402179:role/VP-Auto-Cluster"
+  role_arn = var.cluster_role_arn
   version  = var.eksversion
 
   bootstrap_self_managed_addons = false
@@ -13,7 +13,7 @@ resource "aws_eks_cluster" "example" {
   compute_config {
     enabled       = true
     node_pools    = ["general-purpose"]
-    node_role_arn = "arn:aws:iam::491085402179:role/VP-Node"
+    node_role_arn = var.node_role_arn
   }
 
   kubernetes_network_config {
@@ -37,5 +37,9 @@ resource "aws_eks_cluster" "example" {
       "subnet-0aa2fe8a1c27a5e65",
       "subnet-04ebafb44c2a9c881"
     ]
+  }
+  tags = {
+    Name = "nginx-Cluster"
+    Env = "Lab"
   }
 }
