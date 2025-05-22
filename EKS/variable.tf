@@ -4,14 +4,14 @@ variable "region" {
 }
 variable "eksversion" {
   type = string
-  default = "1.31"
+  default = "1.32"
   description = "K8s version"
 }
 variable "node_role_arn" {
   type = string
-  default = "arn:aws:iam::491085402179:role/VP-Node"
+  default = "arn:aws:iam::491085402179:role/DevKubeNode"
 }
 variable "cluster_role_arn" {
   type = string
-  default = "arn:aws:iam::491085402179:role/VP-Auto-Cluster"
+  default = "arn:aws:iam::491085402179:role/DevKubeCluster"
 }
