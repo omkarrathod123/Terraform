@@ -11,3 +11,6 @@ module "ec2" {
 module "elb" {
   source = "./elb"
 }
+module "eks"{
+  source = "./eks"
+}
