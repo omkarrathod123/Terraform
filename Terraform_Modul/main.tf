@@ -13,4 +13,5 @@ module "elb" {
 }
 module "eks"{
   source = "./eks"
+  instance_types = "t3.large"
 }

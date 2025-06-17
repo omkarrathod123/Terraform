@@ -51,7 +51,7 @@ resource "aws_iam_role_policy_attachment" "eks_ecr_policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
 resource "aws_eks_cluster" "eks_cluster" {
-  name     = "my-eks-cluster"
+  name     = var.eks_cluster_name
   role_arn = aws_iam_role.eks_cluster_role.arn
 
   vpc_config {
@@ -65,7 +65,7 @@ resource "aws_eks_cluster" "eks_cluster" {
 }
 resource "aws_eks_node_group" "eks_node_group" {
   cluster_name    = aws_eks_cluster.eks_cluster.name
-  node_group_name = "eks-node-group"
+  node_group_name = var.node_group_name
   node_role_arn   = aws_iam_role.eks_node_role.arn
   subnet_ids      = [aws_subnet.publicSUB.id,aws_subnet.privateSUB.id,aws_subnet.publicSUB1.id,aws_subnet.privateSUB1.id]
 
@@ -75,7 +75,7 @@ resource "aws_eks_node_group" "eks_node_group" {
     max_size     = 3
   }
 
-  instance_types = ["t3.medium"]
+  instance_types = [var.instance_types]
   ami_type       = "AL2_x86_64"  # Amazon Linux 2
 
   depends_on = [
