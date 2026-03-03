@@ -1,12 +1,12 @@
 resource "aws_instance" "practicLinux" {
   ami = "ami-0f2ce9ce760bd7133"
-  instance_type = "t2.micro"
+  instance_type = var.instanceType
   availability_zone = "ap-south-1b"
   key_name = "Practic"
   
   tags = {
     Name = "PracticLinux"
     Env = "Lab"
-    Date = "27022025"
+    Date = "03032026"
   }
 }
