@@ -1,5 +1,5 @@
 resource "aws_instance" "practicLinux" {
-  ami = "ami-0f2ce9ce760bd7133"
+  ami = var.ami
   instance_type = var.instanceType
   availability_zone = "ap-south-1b"
   key_name = "Practic"

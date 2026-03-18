@@ -1,6 +1,6 @@
 resource "aws_rds_cluster" "example" {
   cluster_identifier = "example"
-  engine             = "aurora-postgresql"
+  engine             = "sqlserver-se"
   engine_mode        = "provisioned"
   engine_version     = "13.6"
   database_name      = "test"
