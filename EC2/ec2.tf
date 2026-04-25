@@ -10,3 +10,8 @@ resource "aws_instance" "practicLinux" {
     Date = "03032026"
   }
 }
+
+output "pubIP" {
+  description = "Displaying public IP"
+  value = aws_instance.practicLinux.public_ip
+}
