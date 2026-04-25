@@ -22,3 +22,10 @@ Below are the essential Terraform commands used for initialization, validation, 
 5. `terraform destroy` – Deletes the managed infrastructure.
 
 ---
+
+## Terraform Module
+A Terraform module is a collection of resources that are grouped together to be managed as a single unit. Modules help in organizing and reusing infrastructure configurations, making it easier to standardize and scale infrastructure provisioning.
+- Workflow:
+1. Module must be created using 'module' keyword.
+2. Can be reusable
+3. Can change variable values (change values be providing variable name.) for reusability
