@@ -1,4 +1,4 @@
-variable "instance_type" {
+variable "instances_type" {
   type = string
   default = "m2.micro"
 }

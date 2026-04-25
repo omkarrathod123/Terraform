@@ -4,9 +4,14 @@ module "s3" {
 }
 module "vpc" {
   source = "./vpc"
+  VPC_cidr_block = "192.167.0.0/16"
+  Public_cidr_block = "192.167.1.0/24"
+  Private_cidr_block = "192.167.2.0/24"
+  availability_zone = "ap-south-1a"
 }
 module "ec2" {
   source = "./ec2"
+  instances_type = "t3.micro"
 }
 module "elb" {
   source = "./elb"
