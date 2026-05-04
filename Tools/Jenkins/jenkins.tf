@@ -3,13 +3,13 @@ resource "aws_instance" "jenkinsUbuntuServer" {
   instance_type = var.instanceType
   availability_zone = var.availabilityZone
   key_name = "Practic"
-  vpc_security_group_ids = [ "sg-05d274dc9c715e508" ]
+  vpc_security_group_ids = [ "sg-037e0bcd651733417" ]
   user_data = file("./insta.sh")
 
   tags = {
     Name = "Jenkins - Ubuntu"
     Env = "Dev"
-    Date = "17042025"
+    Date = "03052026"
     Size = "08 GB"
   }
 }
