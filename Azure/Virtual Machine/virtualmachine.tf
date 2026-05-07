@@ -4,6 +4,9 @@ resource "azurerm_virtual_machine" "practic-VM" {
   resource_group_name = azurerm_resource_group.Practic-Resource-Group.name
   network_interface_ids = [azurerm_network_interface.practic-net-interface.id]
   vm_size = var.vm_size
+  delete_data_disks_on_termination = true
+  delete_os_disk_on_termination = true
+  zones = [ "Zone1" ]
 
   storage_image_reference {
     publisher = "Canonical"
@@ -25,4 +28,5 @@ resource "azurerm_virtual_machine" "practic-VM" {
   os_profile_linux_config {
     disable_password_authentication = false
   }
+  tags = var.tags
 }

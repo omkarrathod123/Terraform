@@ -3,6 +3,7 @@ resource "azurerm_virtual_network" "practic-vnet" {
   location = var.location
   address_space = [ "10.0.0.0/16" ]
   resource_group_name = azurerm_resource_group.Practic-Resource-Group.name
+  tags = var.tags
 }
 resource "azurerm_subnet" "practic-subnet" {
   name = "${var.name}-subnet"
@@ -20,4 +21,5 @@ resource "azurerm_network_interface" "practic-net-interface" {
     subnet_id = azurerm_subnet.practic-subnet.id
     private_ip_address_allocation = "Dynamic"
   }
+  tags = var.tags
 }
