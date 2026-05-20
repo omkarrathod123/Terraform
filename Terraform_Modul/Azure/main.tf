@@ -10,3 +10,6 @@ module "appservice" {
   source = "./appservice"
   name = "${var.name}-app-service"
 }
+module "virtualnetwork" {
+  source = "./virtualnetwork"
+}
