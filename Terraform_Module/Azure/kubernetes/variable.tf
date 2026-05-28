@@ -24,3 +24,8 @@ variable "vm_size" {
   default = "Standard_D2_v2"
   description = "Default VM size is Standard_D2_v2"
 }
+variable "node_count" {
+  type = number
+  default = 1
+  description = "default is 1"
+}

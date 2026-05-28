@@ -19,12 +19,13 @@ resource "azurerm_kubernetes_cluster" "practic-kubernetes-cluster" {
     client_secret = var.service_principal[1]
   }
   tags = var.tags
+  depends_on = [ azurerm_resource_group.Practic-Resource-Group ]
 }
 resource "azurerm_kubernetes_cluster_node_pool" "practic-node-pool" {
   name = "${var.name}-node-pool"
   kubernetes_cluster_id = azurerm_kubernetes_cluster.practic-kubernetes-cluster.id
   vm_size = var.vm_size
-  node_count = 1
+  node_count = var.node_count
 
   depends_on = [ azurerm_kubernetes_cluster.practic-kubernetes-cluster ]
 
