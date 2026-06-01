@@ -5,7 +5,7 @@ resource "aws_ebs_volume" "volume1" {
 
   tags = {
     Name = "volume1"
-    Env = "Lab"
+    Env = "Dev"
     Size = "20"
     Type = "Gunral Purpose 2"
   }

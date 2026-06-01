@@ -6,3 +6,5 @@ sudo systemctl start nginx
 
 sudo cd /etc/www/html/
 sudo echo "This is test" > index.html
+
+sudo echo "Installation Success"
