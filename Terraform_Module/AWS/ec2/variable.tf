@@ -10,3 +10,7 @@ variable "key_name" {
   type = string
   default = "Practic"
 }
+variable "availability_zone" {
+  type = string
+  default = "ap-south-1b"
+}
