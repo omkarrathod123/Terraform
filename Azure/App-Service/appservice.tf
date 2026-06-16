@@ -4,8 +4,8 @@ resource "azurerm_app_service_plan" "practic-app-service-plan" {
   resource_group_name = azurerm_resource_group.practic-rg.name
 
   sku {
-    tier = "Standard"
-    size = "S1"
+    tier = var.sku.tier
+    size = var.sku.size
   }
 }
 resource "azurerm_app_service" "practic-app-service" {

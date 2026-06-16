@@ -7,7 +7,7 @@ resource "aws_instance" "jenkinsUbuntuServer" {
   user_data = file("./insta.sh")
 
   tags = {
-    Name = "Jenkins - Ubuntu"
+    Name = "Dotnet 10 - Ubuntu"
     Env = "Dev"
     Date = "03052026"
     Size = "08 GB"

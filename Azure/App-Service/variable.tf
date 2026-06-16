@@ -7,3 +7,10 @@ variable "location" {
   default = "Central India"
   description = "Central India is default resion location"
 }
+variable "sku" {
+  type = map(string)
+  default = {
+    "tier" = "Standard"
+    "size" = "S1"
+  }
+}
