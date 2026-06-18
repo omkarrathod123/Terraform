@@ -7,3 +7,7 @@ variable "location" {
   default = "Central India"
   description = "Default location is Central India."
 }
+variable "offer_type" {
+  type = string
+  default = "Standard"
+}
