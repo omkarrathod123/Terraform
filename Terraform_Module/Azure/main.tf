@@ -13,3 +13,7 @@ module "appservice" {
 module "virtualnetwork" {
   source = "./virtualnetwork"
 }
+module "cosmosdb"{
+  source = "./cosmosdb"
+  kind = "MongoDB"
+}
