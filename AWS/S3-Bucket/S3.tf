@@ -1,10 +1,10 @@
 resource "aws_s3_bucket" "omkar-rathod-bucket" {
-  bucket = "rathod-omkar-yg-bucket-27022025"
+  bucket = "rathod-omkar-yg-bucket-21062026"
 
   tags = {
-    name = "rathod-omkar-yg-bucket-27022025"
+    name = "rathod-omkar-yg-bucket-21062026"
     Env = "Lab"
-    Date = "27022025"
+    Date = "21062026"
   }
 }
 resource "aws_s3_bucket_versioning" "omkar-rathod-aws_s3_bucket_versioning" {
