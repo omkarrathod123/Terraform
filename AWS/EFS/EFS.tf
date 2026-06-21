@@ -1,8 +1,8 @@
 resource "aws_efs_file_system" "practicEFS" {
-  creation_token = "Practic-28022025"
+  creation_token = var.creation_token
 
   lifecycle_policy {
-    transition_to_ia = "AFTER_30_DAYS"
+    transition_to_ia = var.lifecycle_policy.transition_to_ia
   }
   tags = {
     Name = "Practic-28022025"
