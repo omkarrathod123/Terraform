@@ -1,0 +1,16 @@
+1.> AWS login:- aws login or aws login --remote
+2.> List AWS regions:- list-regions
+3.> AWS Backup:-
+    - Create-backup-vault:- create-backup-vault --backup-vault-name <value>
+    - Create-backup-plan:- create-backup-plan --backup-plan <value> --backup-plan-tags <value>
+    - Show-backup-plan:- get-backup-plan --backup-plan-id <value>
+    - Delete-backup-plan:- delete-backup-plan --backup-plan-id <value>
+    - Delete-backup-vault:- --backup-vault-name <value>
+4.> AWS VPC:-
+    - Create-vpc:- create-vpc --cidr-block <value> --instance-tenancy <value> --ipv4-netmask-length <value>
+    - Create-subnet:- create-subnet --availability-zone-id <value> --cidr-block <value> --vpc-id <value>
+    - Create-internet-gateway:- create-internet-gateway
+    - Create-route-table:- create-route-table --vpc-id <value>
+    - Create-route:- create-route --route-table-id <value> --destination-cidr-block <value> --transit-gateway-id <value>
+    - Delete-vpc:- delete-vpc --vpc-id <value>
+    - Describe-vpc:- describe-vpc-attribute --attribute <value> --vpc-id <value>
