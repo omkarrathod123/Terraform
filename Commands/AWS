@@ -14,3 +14,16 @@
     - Create-route:- create-route --route-table-id <value> --destination-cidr-block <value> --transit-gateway-id <value>
     - Delete-vpc:- delete-vpc --vpc-id <value>
     - Describe-vpc:- describe-vpc-attribute --attribute <value> --vpc-id <value>
+5.> AWS EFS:-
+    - Create-file-system:- create-file-system --performance-mode <value> --availability-zone-name <value>
+    - Create-mount-target:- create-mount-target --file-system-id <value> --subnet-id <value> --security-group <value>
+    - Delete-file-system:- delete-file-system --file-system-id <value>
+    - Delete-mount-target:- delete-mount-target --mount-target-id <value>
+6.> AWS S3:-
+    - Copy:- aws s3 cp <localPath> <S3Uri> --storage-class <value>
+    - List:- aws s3 ls <S3Uri> --human-readable --recursive
+    - Move:- aws s3 mv <localPath> <S3Uri>
+    - Delete:- aws s3 rm <S3Uri>
+    - Set Website:- aws s3 website <S3Uri> --index-document <value> --error-document <value>
+    - Create:- aws s3 mb <S3Uri> --version <value> (Name of the S3 bucket is must be unique.)
+    - Delete:- aws s3 rb <S3Uri> (Only empty S3 Bucket can be delete.)
