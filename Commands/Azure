@@ -1,0 +1,16 @@
+1.> Azure Login:-
+    - az login
+    - az account set --subscription <id>
+    - az login --identity <id>
+    - az account show
+    - az logout
+2.> Azure Resource Group:-
+    - Create:- az group create --name <value> --location <value>
+    - List:- az group list
+    - Show:- az group show --name <value>
+    - Delete:- az group delete --name <value>
+3.> Azure Compute-fleet
+    - Create:- az azure-fleet create --resource-group <value> --fleet-name <value> --zones "[zone1,zone2]"--location <value>
+    - Delete:- az azure-fleet delete --resource-group <value> --fleet-name <value>
+    - Show:- az azure-fleet show --resource-group <value> --fleet-name <value>
+    - List-VM:- az azure-fleet virtual-machine-scale-set list --resource-group <value> --name <value>
