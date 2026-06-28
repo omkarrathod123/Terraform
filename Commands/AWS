@@ -1,4 +1,4 @@
-1.> AWS login:- aws login or aws login --remote
+1.> AWS Login:- aws login or aws login --remote
 2.> List AWS regions:- list-regions
 3.> AWS Backup:-
     - Create-backup-vault:- create-backup-vault --backup-vault-name <value>
