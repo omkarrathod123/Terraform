@@ -27,3 +27,11 @@
     - Job Show:- az backup job show --name <value> --resource-group <value> --vault-name <value>
     - Job Stop:- az backup job stop --name <value> --resource-group <value> --vault-name <value>
     - Job Wait:- az backup job wait --name <value> --resource-group <value> --vault-name <value>
+6.> Azure Container:-
+    - Create:- az container create -g <value> --name <value> --image <containerimageaddress> --cpu <value> --memory <value>
+    - Delete:- az container delete --name <value> --resource-group <value>
+    - List:- az container list --resource-group <value>
+    - Logs:- az container logs --name <value> --resource-group <value>
+    - Restart:- az container restart --name <value> --resource-group <value>
+    - Start:- az container start --name <value> --resource-group <value>
+    - Stop:- az container stop --name <value> --resource-group <value>
