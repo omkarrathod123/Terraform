@@ -14,3 +14,16 @@
     - Delete:- az azure-fleet delete --resource-group <value> --fleet-name <value>
     - Show:- az azure-fleet show --resource-group <value> --fleet-name <value>
     - List-VM:- az azure-fleet virtual-machine-scale-set list --resource-group <value> --name <value>
+4.> Azure App-service:-
+    - Create:- az appservice ase create -n <value> -g <value> --vnet-name <value> --subnet <value>
+    - List:- az appservice ase show --name <value> --resource-group
+    - Edit:- az appservice ase update -n <value> -g <value> --allow-new-private-endpoint-connections <value(bool)> --resource-group <value>
+    - Delete:- az appservice ase delete -n <value>
+5.> Azure Backup:-
+    - Register:- az backup container register --resource-group <value> --vault-name <value> --resource-id <value> --workload-type <value> --backup-management-type <value>
+    - Show:- az backup container show --name <value> --resource-group <value> --vault-name <value>
+    - Unregister:- az backup container unregister --container-name <value> --resource-group <value> --vault-name <value> --backup-management-type <value>
+    - Job List:- az backup job list --resource-group <value> --vault-name <value>
+    - Job Show:- az backup job show --name <value> --resource-group <value> --vault-name <value>
+    - Job Stop:- az backup job stop --name <value> --resource-group <value> --vault-name <value>
+    - Job Wait:- az backup job wait --name <value> --resource-group <value> --vault-name <value>
